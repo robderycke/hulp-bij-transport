@@ -1,0 +1,74 @@
+// #region *** SETTINGS ***
+$primary-color: #0d6efd;
+$secondary-color: #212529;
+$font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-body: 'Arial', sans-serif;
+$transition-speed: 0.4s;
+// #endregion
+
+// #region *** GENERIC ***
+body {
+    font-family: $font-body;
+    padding-top: 56px; // Offset voor fixed navbar
+    background-color: #f8f9fa;
+}
+// #endregion
+
+// #region *** ELEMENTS ***
+h1, h2, h3, h4 {
+    font-family: $font-heading;
+}
+// #endregion
+
+// #region *** COMPONENTS ***
+.c-hero {
+    height: 70vh;
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(200,220,255,0.5) 100%),
+                url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.c-info-card {
+    background: white;
+    transition: $transition-speed;
+    &:hover {
+        border-color: $primary-color !important;
+        transform: scale(1.02);
+    }
+}
+
+.c-card-principle {
+    transition: $transition-speed;
+    cursor: help;
+    &:hover {
+        background-color: $primary-color;
+        color: white;
+        transform: translateY(-10px);
+        .c-icon-circle {
+            background-color: white !important;
+            color: $primary-color !important;
+        }
+    }
+}
+
+.c-icon-circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.25rem;
+    transition: $transition-speed;
+}
+// #endregion
+
+// #region *** UTILITIES ***
+.u-text-gradient {
+    background: linear-gradient(45deg, $primary-color, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+// #endregion
